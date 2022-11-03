@@ -444,6 +444,7 @@ std::string solve(std::string encrypted_string) {
 	Uses frequency analysis to try decrypt a caesar cypher
 	and will return the best solution using distance formula
 	*/
+
 	// from marian webster A-Z
 	std::vector<double> ENGLISH_FREQUENCIES{.084966,.020720,.045388,.033844,.111607,.018121,.024705,.030034, .075448,.001965,.011016,.054893,.030129,.066544,.071635,.031671,.001962,.075809,.057351,.069509,.036308,.010074,.012899,.002902,.017779,.002902};
 
@@ -462,6 +463,7 @@ std::string solve(std::string encrypted_string) {
 		currentDist = calcDistance(frequencies, ENGLISH_FREQUENCIES );
 
 		if (best_distance > currentDist) {
+			// if this is a better fit put it's statistics
 			best_distance = currentDist;
 			best_shift = i;
 		}

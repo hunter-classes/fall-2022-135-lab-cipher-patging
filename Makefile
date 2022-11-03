@@ -12,7 +12,7 @@ funcs.o: funcs.cpp funcs.h
 	g++ -c -std=c++11 funcs.cpp caesar.cpp
 
 main.o: main.cpp caesar.h funcs.h
-	g++ -c main.cpp funcs.cpp caesar.cpp
+	g++ -c -std=c++11  main.cpp funcs.cpp caesar.cpp
 
 tests.o: tests.cpp doctest.h funcs.h caesar.h
 	g++ -c -std=c++11 tests.cpp funcs.cpp caesar.cpp
